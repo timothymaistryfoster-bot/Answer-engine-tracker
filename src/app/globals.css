@@ -41,10 +41,40 @@ h3 {
   align-items: center;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .cols-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.status-list {
+  display: grid;
+  gap: 10px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.field-flex-1 {
+  flex: 1;
+}
+
+.field-flex-2 {
+  flex: 2;
 }
 
 textarea,
@@ -170,4 +200,16 @@ th {
 .badge-error {
   background: #fee2e2;
   color: #991b1b;
+}
+
+@media (max-width: 900px) {
+  .status-grid,
+  .responsive-1col,
+  .cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .wrap-on-mobile {
+    flex-wrap: wrap;
+  }
 }
